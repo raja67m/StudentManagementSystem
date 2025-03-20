@@ -5,10 +5,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Student Managemnet System</title>
    <link rel="stylesheet" href="student.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
    <header>student Managemnet System</header>
    <section>
+      <div class="managementContainer">
+
+   
       <div class="addNewStudent">
          <h3>New student</h3>
          <input type="text"  class="studentName" name="studentName" placeholder="Name">
@@ -37,13 +42,13 @@
          <tbody>
             <tr>
                <td>1</td>
-               <td>Raja</td>
+               <td>Raja lingam</td>
                <td>IT</td>
                <td>23</td>
                <td>raja123@gmail.com</td>
                <td>
-                  <button class="edit-btn">Edit</button>
-                  <button class="delete-btn">Delete</button>
+                  <button class="edit-btn"><i class='bx bxs-edit'></i>Edit</button>
+                  <button class="delete-btn"><i class="fi fi-sr-trash"></i></i>Delete</button>
                </td>
             </tr>
          </tbody>
@@ -51,6 +56,8 @@
          </table>
 
       </div>
+</div>
+
    </section>
 </body>
 </html>

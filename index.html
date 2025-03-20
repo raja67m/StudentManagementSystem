@@ -4,8 +4,53 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Student Managemnet System</title>
+   <link rel="stylesheet" href="student.css">
 </head>
 <body>
-   <h1>student management system</h1>
+   <header>student Managemnet System</header>
+   <section>
+      <div class="addNewStudent">
+         <h3>New student</h3>
+         <input type="text"  class="studentName" name="studentName" placeholder="Name">
+         <input type="text" class="studentDept" name="studentDept" placeholder="Dept"/>
+         <input type="number" class="studentAge" name="studentAge" placeholder="Age"/>
+         <input type="email" class="studentEmail" name="studentEmail" placeholder="Email"/>
+         <div class="add-btnContainer">
+            <button type="submit" class="save-btn">Save</button>
+            <button type="submit" class="cancel">Cancel</button>
+         </div>
+      </div>
+
+      <div class="studentDetails">
+         <table>
+           <thead>
+            <tr>
+               <th>Roll No</th>
+               <th>Name</th>
+               <th>Dept</th>
+               <th>Age</th>
+               <th>Email</th>
+               <th>Actions</th>
+            </tr>
+
+           </thead>
+         <tbody>
+            <tr>
+               <td>1</td>
+               <td>Raja</td>
+               <td>IT</td>
+               <td>23</td>
+               <td>raja123@gmail.com</td>
+               <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+               </td>
+            </tr>
+         </tbody>
+
+         </table>
+
+      </div>
+   </section>
 </body>
 </html>

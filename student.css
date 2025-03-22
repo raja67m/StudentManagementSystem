@@ -4,9 +4,9 @@
 
 
 }
-header{
+h1{
    text-transform:uppercase;
-   font-size: 32px;
+   font-size:5vh;
    font-weight: 700;
    color: rgb(43, 113, 113);
    padding: 15px;
@@ -34,6 +34,7 @@ h3{
    color: rgb(43, 113, 113);
    text-align: center;
    font-family:monospace;
+   margin: auto;
 }
 
 .addNewStudent input{
@@ -152,5 +153,13 @@ i{
 .addNewStudent{
   margin:  5px auto 1px auto;
 }
+.studentDetails
+{
+overflow: auto;
+}
+body{
+   overflow: hidden;
+}
+
 
 }

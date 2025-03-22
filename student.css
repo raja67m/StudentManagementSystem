@@ -144,3 +144,13 @@ color: rgb(43, 113, 113);
 i{
  margin-right: 5px;
 }
+@media screen and (max-width: 768px) {
+   .managementContainer{
+      display: flex;
+      flex-direction: column;
+   }
+.addNewStudent{
+  margin:  5px auto 1px auto;
+}
+
+}

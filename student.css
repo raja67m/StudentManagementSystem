@@ -14,7 +14,7 @@ h1{
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    background: rgb(193, 235, 235);
 }
-.managementContainer{
+.form{
    display:flex;
    flex-direction: row;
 }
@@ -146,7 +146,7 @@ i{
  margin-right: 5px;
 }
 @media screen and (max-width: 768px) {
-   .managementContainer{
+   .form{
       display: flex;
       flex-direction: column;
    }

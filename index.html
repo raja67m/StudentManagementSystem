@@ -14,18 +14,18 @@
 
    </div>
    <section>
-      <div class="managementContainer">
+      <form action="" class="form" id="form">
 
    
       <div class="addNewStudent">
          <h3>New student</h3>
-         <input type="text"  class="studentName" name="studentName" placeholder="Name">
-         <input type="text" class="studentDept" name="studentDept" placeholder="Dept"/>
-         <input type="number" class="studentAge" name="studentAge" placeholder="Age"/>
-         <input type="email" class="studentEmail" name="studentEmail" placeholder="Email"/>
+         <input type="text"  class="studentName" id="studentName" placeholder="Name">
+         <input type="text" class="studentDept" id="studentDept" placeholder="Dept"/>
+         <input type="number" class="studentAge" id="studentAge" placeholder="Age"/>
+         <input type="email" class="studentEmail" id="studentEmail" placeholder="Email"/>
          <div class="add-btnContainer">
-            <button type="submit" class="save-btn">Save</button>
-            <button type="submit" class="cancel">Cancel</button>
+            <button type="submit" class="save-btn" id="save-btn">Save</button>
+            <button type="submit" class="cancel" id="cancel">Cancel</button>
          </div>
       </div>
 
@@ -59,8 +59,10 @@
          </table>
 
       </div>
-</div>
+</form>
 
    </section>
+
+   <script src="student.js"></script>
 </body>
 </html>

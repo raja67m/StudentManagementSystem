@@ -76,6 +76,7 @@ h3{
    font-family: monospace;
    cursor: pointer;
    transition: .5s; 
+   display: none;
 }
 .cancel:hover{
    background: none;

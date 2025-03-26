@@ -8,7 +8,7 @@
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
-<body>
+<body onload="readAll()">
    <div>
       <h1>student Managemnet System</h1>
 
@@ -20,23 +20,22 @@
       <div class="addNewStudent">
          <h3>New student</h3>
      
-         <input type="text"  class="studentRolloNo" id="studentRollno" placeholder="Rollo no" >
+         <input type="text"  class="id" id="id"  hidden/>
 
-         <input type="text"  class="studentName" id="studentName" placeholder="Name">
+         <input type="text"  class="studentName" id="studentName" placeholder="Name"/>
          <input type="text" class="studentDept" id="studentDept" placeholder="Dept"/>
          <input type="number" class="studentAge" id="studentAge" placeholder="Age"/>
          <input type="email" class="studentEmail" id="studentEmail" placeholder="Email"/>
          <div class="add-btnContainer">
-            <button type="submit" class="save-btn" id="save-btn">Save</button>
-            <button type="button" class="cancel" id="cancel">Cancel</button>
+            <button type="button" class="save-btn" id="save-btn" onclick="createRecord()">Save</button>
+            <button class="cancel" id="cancel" >Update</button>
          </div>
       </div>
 
-      <div class="studentDetails">
+      <div class="studentDetails" >
          <table>
            <thead>
             <tr>
-               <th>Roll No</th>
                <th>Name</th>
                <th>Dept</th>
                <th>Age</th>
@@ -46,17 +45,7 @@
 
            </thead>
          <tbody id="studentData">
-            <!-- <tr>
-               <td>1</td>
-               <td>Raja lingam</td>
-               <td>IT</td>
-               <td>23</td>
-               <td>raja123@gmail.com</td>
-               <td>
-                  <button class="edit-btn" onclick="editRecord(this)"><i class='bx bxs-edit'></i>Edit</button>
-                  <button class="delete-btn" onclick="deleteRecord(this)"><i class='bx bxs-trash'></i>Delete</button>
-               </td>
-            </tr> -->
+            
          </tbody>
 
          </table>
@@ -66,6 +55,6 @@
 
    </section>
 
-   <script src="./student.js"></script>
+   <script src="./curd.js"></script>
 </body>
 </html>

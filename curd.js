@@ -8,8 +8,8 @@ var studentAge=document.getElementById('studentAge');
 var studentEmail=document.getElementById('studentEmail');
 
 let data=[
-   {id:1,studentName:"Rajalingam",studentDept:"IT",studentAge:23,studentEmail:"raj12@gmail.com"},
-   {id:2,studentName:"Raja",studentDept:"IT",studentAge:23,studentEmail:"rajeh12@gmail.com"},
+   {id:1,studentName:"Suresh",studentDept:"IT",studentAge:23,studentEmail:"suresh@gmail.com"},
+   {id:2,studentName:"Raj",studentDept:"IT",studentAge:23,studentEmail:"raj123@gmail.com"},
 
 ];
 
@@ -29,7 +29,7 @@ function readAll(){
       <td>${record.studentEmail}</td>
     <td>
    <button type="button" class="edit-btn" onclick={edit(${record.id})}><i class='bx bxs-edit'></i>Edit</button>
-   <button type="button" class="delete-btn"><i class='bx bxs-trash'></i>Delete</button>
+   <button type="button" class="delete-btn" onclick={deleteRecord(${record.id})}><i class='bx bxs-trash'></i>Delete</button>
                </td>
       </tr>
       `
@@ -46,12 +46,19 @@ function createRecord(){
    var studentDept=document.querySelector('.studentDept').value;
    var studentAge=document.querySelector('.studentAge').value;
    var studentEmail=document.querySelector('.studentEmail').value;
-   var addData={id:3,studentName:studentName,studentAge:studentAge,studentDept:studentDept,studentEmail:studentEmail};
+   if(studentAge<18 || studentAge>26){
+   alert("Above 18 to 26 only eligible");
+   }
+   else{
+      var addData={id:3,studentName:studentName,studentAge:studentAge,studentDept:studentDept,studentEmail:studentEmail};
 
-data.push(addData);
-console.log(addData)
-readAll();
-resetForm();
+      data.push(addData);
+      console.log(addData)
+      readAll();
+      resetForm();
+   }
+
+  
 }
 
 // edit function
@@ -59,8 +66,37 @@ resetForm();
 function edit(id){
 document.querySelector('.cancel').style.display="block";
 document.querySelector('.save-btn').style.display="none";
+ 
+var obj=data.find(rec=>rec.id === id);
+document.querySelector('.studentName').value=obj.studentName;
+document.querySelector('.studentDept').value=obj.studentDept;
+document.querySelector('.studentAge').value=obj.studentAge;
+document.querySelector('.studentEmail').value=obj.studentEmail;
+document.querySelector('.id').value=obj.id;
+}
+
+// update the function
+function update(){
+   // change the block style
+   document.querySelector('.cancel').style.display="none";
+document.querySelector('.save-btn').style.display="block";
+   var id =parseInt(document.querySelector('.id').value);
+   var studentName=document.querySelector('.studentName').value;
+   var studentDept=document.querySelector('.studentDept').value;
+   var studentAge=document.querySelector('.studentAge').value;
+   var studentEmail=document.querySelector('.studentEmail').value;
+   var index=data.findIndex(rec=>rec.id===id);
+   data[index]={studentName,studentAge,studentDept,studentAge,studentEmail};
+   readAll();
+  resetForm();
 
 }
+// delete function
+function deleteRecord(id){
+data=data.filter(rec=>rec.id!==id);
+readAll();
+}
+
 
 // reset form
 function resetForm(){
